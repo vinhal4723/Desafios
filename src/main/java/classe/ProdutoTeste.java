@@ -1,27 +1,18 @@
 package classe;
 
-import java.util.Scanner;
-
 public class ProdutoTeste {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Produto p1 = new Produto();
-        p1.nome = "notebook";
-        p1.preco = 4356.89;
-        p1.desconto = 0.25;
+            Produto produto1 = new Produto();
+            produto1.nome = "Notebook Acer 15' 8GB";
+            produto1.preco = 2300;
 
-        var p2 = new Produto();
-        p2.nome = "Caneta Preta";
-        p2.preco = 12.56;
-        p2.desconto = 0.29;
+            Produto produto2 = new Produto("Caneta BIC Preata", 2.83);
 
-        System.out.println(p1.nome);
-        System.out.println(p2.nome);
+            Produto.desconto = 0.05;
 
-        double precoFinal1 = p1.preco * (1 - p1.desconto);
-        double precoFinal2 = p2.preco * (1 - p2.desconto);
-        double totalCarrinho = (precoFinal1 + precoFinal2);
-        System.out.printf("Total do carrinho R$" + totalCarrinho);
+            System.out.println(produto1.precoComDesconto());
+            System.out.println(produto2.precoComDesconto());
+        }
     }
-}
