@@ -25,9 +25,10 @@ public class Exercicio {
          System.out.println(totalAlunoA / notasAlunoA.length);
 
          double[] notasAlunoB = {6.9, 8.9, 5.5, 10 };
+           System.out.println(Arrays.toString(notasAlunoB));
 
-         double totalAlunoB = 0;
-         for(int i = 0; i < notasAlunoA.length; i++){
+           double totalAlunoB = 0;
+           for(int i = 0; i < notasAlunoA.length; i++){
              totalAlunoB += notasAlunoB[i];
          }
          System.out.println(totalAlunoB / notasAlunoB.length);
